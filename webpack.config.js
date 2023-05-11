@@ -27,10 +27,16 @@ module.exports = {
   module: {
     rules: [
       {
-        // Include ts, tsx, js, and jsx files.
         test: /\.(ts|js)x?$/,
         exclude: [/node_modules/, /\.serverless/, /\.webpack/],
-        use: ['babel-loader'],
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
+            },
+          },
+        ],
       },
     ],
   },

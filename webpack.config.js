@@ -12,7 +12,7 @@ module.exports = {
   target: 'node',
   externals: [nodeExternals()],
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+    extensions: ['.js', '.json', '.ts'],
     plugins: [
       new TsconfigPathsPlugin({
         configFile: './tsconfig.paths.json',

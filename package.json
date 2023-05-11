@@ -9,9 +9,6 @@
     "deploy:dev": "sls deploy --stage dev",
     "deploy:prd": "sls deploy --stage prd"
   },
-  "engines": {
-    "node": ">=16.15.1"
-  },
   "dependencies": {
     "apollo-server-lambda": "3.9.0",
     "aws-sdk": "2.1160.0",

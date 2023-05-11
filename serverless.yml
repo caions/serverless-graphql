@@ -8,6 +8,7 @@ custom:
     local:
       NODE_ENV: development
   webpack:
+    packager: 'yarn'
     webpackConfig: './webpack.config.js'
     includeModules:
       forceExclude:

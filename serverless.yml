@@ -1,0 +1,31 @@
+service: ts-graphql-webpack
+frameworkVersion: '3'
+package:
+  individually: true
+
+custom:
+  config:
+    local:
+      NODE_ENV: development
+  webpack:
+    webpackConfig: './webpack.config.js'
+    includeModules:
+      forceExclude:
+        - aws-sdk
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  graphql:
+    handler: handler.graphql
+    events:
+      - http:
+          path: /graphql
+          method: post
+          cors: true
